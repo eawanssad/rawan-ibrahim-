@@ -5,12 +5,27 @@
 #include <windows.h>
 #include <math.h>
 
+void drawgrass2(){
+glTranslatef(60,0,0);
+    glBegin(GL_POLYGON);
 
+    glColor3f(0.0f,0.8f,0.1f);
+    glVertex2f(-210,30);
+    glVertex2f(-180,30);
+    glVertex2f(-180,50);
+    glVertex2f(-185,40);
+    glVertex2f(-195,65);
+    glVertex2f(-205,40);
+    glVertex2f(-210,50);
+
+    glEnd();
+}
 void display1()
 {
 
     glClear(GL_COLOR_BUFFER_BIT);
     glLoadIdentity();
+
 // the house////////////////////////////////
     glBegin(GL_POLYGON);
     glColor3f(1.0f,1.0f,0.2);
@@ -64,14 +79,18 @@ void display1()
     glVertex2f(250,-250);
 
     glEnd();
+    /////thegrass
     glBegin(GL_POLYGON);
     glColor3f(0.0f,0.8f,0.1f);
     glVertex2f(-210,-30);
     glVertex2f(-180,-30);
     glVertex2f(-180,50);
-    glVertex2f(-195,40);
+    glVertex2f(-185,40);
+    glVertex2f(-195,65);
+    glVertex2f(-205,40);
     glVertex2f(-210,50);
     glEnd();
+
 // the green ground////////////////////
     glBegin(GL_POLYGON);
     glColor3f(0.6f,0.8f,0.1f);
@@ -131,6 +150,61 @@ void display1()
     glVertex2f(-90,30);
     glVertex2f(-90,-140);
     glEnd();
+    ///// the treee
+glBegin(GL_TRIANGLES);
+  glColor3f(0.0f,0.8f,0.1f);
+ glVertex2f(250,80);
+    glVertex2f(150,80);
+    glVertex2f(200,130);
+glEnd();
+glBegin(GL_TRIANGLES);
+  glColor3f(0.0f,0.8f,0.1f);
+ glVertex2f(250,60);
+    glVertex2f(150,60);
+    glVertex2f(200,100);
+glEnd();
+glBegin(GL_TRIANGLES);
+  glColor3f(0.0f,0.8f,0.1f);
+ glVertex2f(250,40);
+    glVertex2f(150,40);
+    glVertex2f(200,100);
+glEnd();
+glBegin(GL_POLYGON);
+glColor3f(0.3f,0.0f,0.1f);
+   glVertex2f(200,0);
+    glVertex2f(200,40);
+    glVertex2f(205,40);
+    glVertex2f(205,0);
+    glEnd();
+    ////the mashroum
+    glBegin(GL_POLYGON);
+  glColor3f(1.0f,0.0f,0.3f);
+    glVertex2f(-175,35);
+    glVertex2f(-155,35);
+    glVertex2f(-165,50);
+    glEnd();
+
+  glBegin(GL_POLYGON);
+ glColor3f(0.3f,0.0f,0.1f);
+    glVertex2f(-168,35);
+    glVertex2f(-161,35);
+    glVertex2f(-161,30);
+    glVertex2f(-169,30);
+    glEnd();
+       glBegin(GL_POLYGON);
+  glColor3f(1.0f,0.0f,0.3f);
+    glVertex2f(-240,35);
+    glVertex2f(-220,35);
+    glVertex2f(-230,50);
+    glEnd();
+      glBegin(GL_POLYGON);
+ glColor3f(0.3f,0.0f,0.1f);
+    glVertex2f(-235,35);
+    glVertex2f(-235,30);
+    glVertex2f(-227,30);
+    glVertex2f(-227,35);
+    glEnd();
+
 //the triangle of the house
     glBegin(GL_TRIANGLES);
     glColor3f(0.0f,0.5f,0.5f);
@@ -140,6 +214,7 @@ void display1()
     glColor3f(0.0f,0.0f,0.3f);
     glVertex2f(0,150);
     glEnd();
+
 
 // rotated windows
     glRotatef(40.0,0.0,0.0,0.0);
@@ -182,6 +257,129 @@ void display1()
     glVertex2f(80,15);
     glVertex2f(40,15);
     glEnd();
+    //////////////////////////////////////THE BIRD
+    glLineWidth(3.0);
+    glBegin(GL_POLYGON);
+    glColor3f(1,0.6,0);
+    glVertex2f(-150,-150);
+    glVertex2f(-130,-150);
+    glVertex2f(-140,-170);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(1,1,1);
+    glVertex2f(-150,-150);
+    glVertex2f(-130,-150);
+    glVertex2f(-140,-170);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(1,0,0);
+    glVertex2f(-145,-150);
+    glVertex2f(-135,-150);
+    glVertex2f(-140,-158);
+    glEnd();
+///////////////the body
+    glBegin(GL_LINE_LOOP);
+    glColor3f(1,0.9,0.1);
+    glVertex2f(-150,-150);
+    glVertex2f(-130,-150);
+    glVertex2f(-140,-170);
+    glEnd();
+
+/////////////////right wing
+    glBegin(GL_POLYGON);
+    glColor3f(1,0.9,0.1);
+    glVertex2f(-130,-150);
+    glVertex2f(-135,-160);
+    glVertex2f(-130,-170);
+    glEnd();
+///////////////////left wing
+    glBegin(GL_POLYGON);
+    glColor3f(1,0.9,0.1);
+    glVertex2f(-150,-150);
+    glVertex2f(-145,-160);
+    glVertex2f(-150,-170);
+    glEnd();
+/////////////////////////head
+    glBegin(GL_POLYGON);
+    glColor3f(1,0.9,0.1 );
+    glVertex2f(-140,-130);
+    glVertex2f(-130,-150);
+    glVertex2f(-150,-150);
+    glEnd();
+
+/////////////the eyes
+    glBegin(GL_POLYGON);
+    glColor3f(0.6,0.5,0.4);
+    glLineWidth(3.0);
+    glVertex2f(-140,-145);
+    glVertex2f(-136,-145);
+    glVertex2f(-138,-142);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glColor3f(0.6,0.5,0.4);
+    glLineWidth(3.0);
+    glVertex2f(-145,-145);
+    glVertex2f(-141,-145);
+    glVertex2f(-143,-142);
+    glEnd();
+    //////////////////////////
+    /////////////////////////////the head of stick man
+    glLineWidth(4.0);//to make the line width thicker or thiner
+    glTranslated(200,-10,0);//to begin from the top
+    glBegin(GL_LINE_LOOP);
+    float rradius =20.0;
+    float aangle =0.0;
+    int j;
+    glColor3f(0,0,0);//to change the circle color
+    for(j=0;j<360;j++)
+    {
+        aangle=j*3.14/180;
+        glVertex2f(0.70*rradius*cos(aangle),rradius*sin(aangle));
+    }
+    glEnd();
+//////////////////////////body of stick man
+    glBegin(GL_LINES);
+    glLineWidth(4.0);
+    glColor3f(0,0,0);
+    glLineWidth(3.0);
+    glVertex2f(0,-20);
+    glVertex2f(0,-80);
+    glEnd();
+////////////////////////the right hand
+    glBegin(GL_LINES);
+    glLineWidth(4.0);
+    glColor3f(0,0,0);
+    glLineWidth(3.0);
+    glVertex2f(0,-45);
+    glVertex2f(20,-25);
+    glEnd();
+/////////////////////////the left hand
+    glBegin(GL_LINES);
+    glLineWidth(4.0);
+    glColor3f(0,0,0);
+    glLineWidth(3.0);
+    glVertex2f(0,-45);
+    glVertex2f(-20,-25);
+    glEnd();
+//////////////////the right leg
+    glBegin(GL_LINES);
+    glLineWidth(4.0);
+    glColor3f(0,0,0);
+    glLineWidth(3.0);
+    glVertex2f(0,-80);
+    glVertex2f(15,-130);
+    glEnd();
+//////////////////////the left leg
+    glBegin(GL_LINES);
+    glLineWidth(4.0);
+    glColor3f(0,0,0);
+    glLineWidth(3.0);
+    glVertex2f(0,-80);
+    glVertex2f(-15,-130);
+    glEnd();
     glFlush();
 
 
@@ -221,6 +419,7 @@ void display()
     glClear(GL_COLOR_BUFFER_BIT);
     display1();
     glLoadIdentity();
+    drawgrass2();
     glTranslated(step,0,0);
     glLineWidth(5.0);//to make the line width thicker or thiner
     glTranslated(-250,200,0);//to begin from the top
@@ -279,12 +478,15 @@ void display()
     glEnd();
 /////////////////////////////////////the sail
     glBegin(GL_POLYGON);
-    glColor3f(0.8,0.3,0);
+    glColor3f(0.9,0.8,0.8);
     glVertex2f(58,-390);
     glVertex2f(-20,-390);
     glVertex2f(-20,-280);
     glEnd();
     glFlush();
+/////////////// the cloud
+
+
 
 
 }
